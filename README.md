@@ -37,9 +37,14 @@ The unit tests uses the Google Test framework. Assuming that it has been added t
 
 ### Setup Workspace
 1. Make sure you are in the project root. From the command line, your folder should look like this: 
-   ```
-   <Insert Tree Here>
-   ```
+ ```
+├── build.sh
+├── get_googletest.sh
+├── include
+├── README.md
+├── src
+└── tests
+```
 2. `./get_googletest.sh` ==> **NOTE: THIS SCRIPT WILL CLONE GOOGLE'S TESTING FRAMEWORK. IT REQUIRES GIT TO CLONE THE FRAMEWORK.**
 3. `./build.sh`
 
@@ -89,7 +94,7 @@ Holds relevant information for the estimation of target states. This should be u
 **NOTE: The simulator MUST be passed a valid motion plan!**
 
 **USAGE:**
-`MotionPlan(VECT_OF_EFFORTS, START_POSITION, SCALE_FACTOR)`
+`MotionPlan(VECT_OF_EFFORTS, START_POSITION, SCALE_FACTOR, MOTION_BOUND)`
 
 #### MotionSimulator
 The main class that is responsible for determining the result or if a result of a motion plan can be reached.
